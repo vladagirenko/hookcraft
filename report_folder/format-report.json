@@ -1,0 +1,86 @@
+[
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "632a60a2-35cf-4e1d-b7d9-617d151f59b8"
+      },
+      "Id": "b4539a93-d41d-46f9-a58a-f7fdc6315037"
+    },
+    "FileName": "UserManager.cs",
+    "FilePath": "C:\\Users\\Game-X_Lviv\\Desktop\\hookcraft\\src\\HookCraft.Core\\UserManager.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 20,
+        "CharNumber": 52,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 11 characters with \u0027\\r\\n\\s\\s\\s\\s\\s\\s\\s\\s\u0027."
+      },
+      {
+        "LineNumber": 21,
+        "CharNumber": 59,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 11 characters with \u0027\\r\\n\\s\\s\\s\\s\\s\\s\\s\\s\u0027."
+      },
+      {
+        "LineNumber": 22,
+        "CharNumber": 82,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 7 characters with \u0027\\r\\n\\s\\s\\s\\s\u0027."
+      },
+      {
+        "LineNumber": 35,
+        "CharNumber": 1,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 26 characters with \u0027\\r\\n\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\u0027."
+      },
+      {
+        "LineNumber": 43,
+        "CharNumber": 1,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 26 characters with \u0027\\r\\n\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\u0027."
+      },
+      {
+        "LineNumber": 58,
+        "CharNumber": 81,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 19 characters with \u0027\\r\\n\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\u0027."
+      },
+      {
+        "LineNumber": 61,
+        "CharNumber": 29,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 15 characters with \u0027\\r\\n\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\u0027."
+      },
+      {
+        "LineNumber": 71,
+        "CharNumber": 45,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 19 characters with \u0027\\r\\n\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\u0027."
+      },
+      {
+        "LineNumber": 88,
+        "CharNumber": 43,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 15 characters with \u0027\\r\\n\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\u0027."
+      },
+      {
+        "LineNumber": 97,
+        "CharNumber": 27,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 19 characters with \u0027\\r\\n\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\u0027."
+      },
+      {
+        "LineNumber": 105,
+        "CharNumber": 30,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 15 characters with \u0027\\r\\n\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\u0027."
+      },
+      {
+        "LineNumber": 111,
+        "CharNumber": 29,
+        "DiagnosticId": "WHITESPACE",
+        "FormatDescription": "Fix whitespace formatting. Replace 15 characters with \u0027\\r\\n\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\\s\u0027."
+      }
+    ]
+  }
+]
