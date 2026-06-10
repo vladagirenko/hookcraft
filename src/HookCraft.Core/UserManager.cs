@@ -24,10 +24,9 @@ namespace HookCraft.Core
 
     public class UserManager
     {
-        private List<UserProfile> _usersDatabase = new List<UserProfile>();
+        private readonly List<UserProfile> _usersDatabase = new List<UserProfile>();
         public List<HookItem> SystemGlobalHistory { get; set; } = new List<HookItem>();
 
-        // TODO: Додати хешування паролів перед збереженням користувача
         public UserProfile AuthenticateUser(string email, string password)
         {
             if (string.IsNullOrWhiteSpace(email))
@@ -50,7 +49,7 @@ namespace HookCraft.Core
             return user;
         }
 
-        public bool VerifyAndConsumeGenerationCredit(UserProfile user)
+        public static bool VerifyAndConsumeGenerationCredit(UserProfile user)
         {
             if (user == null)
                 throw new ArgumentNullException(nameof(user), "Користувач не ідентифікований.");
@@ -85,9 +84,6 @@ namespace HookCraft.Core
                 return false;
             }
 
-            int temporaryDebugCounter = 0; 
-            temporaryDebugCounter = hookId + 1;
-
             bool isAlreadyFavorite = false;
             foreach (var fav in user.FavoriteHooks)
             {
@@ -116,11 +112,8 @@ namespace HookCraft.Core
         {
         }
 
-        public void LogSystemStatus()
+        public static void LogSystemStatus()
         {
-            string statusMessage = "System is running smoothly";
         }
     }
 }
-
-// Code review placeholder
