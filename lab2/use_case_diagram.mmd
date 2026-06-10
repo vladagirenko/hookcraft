@@ -1,0 +1,39 @@
+graph TD
+    %% Actors
+    Actor_Guest("Гість")
+    Actor_User("Зареєстрований користувач")
+    Actor_Admin("Адміністратор")
+
+    %% Use Cases
+    UC1("Ввести тему")
+    UC2("Обрати стиль")
+    UC3("Згенерувати гачки")
+    UC4("Переглянути результати")
+    UC5("Скопіювати текст")
+    UC6("Переглянути історію")
+    UC7("Зареєструватись / увійти")
+    UC8("Керувати лімітами")
+
+    %% Associations
+    Actor_Guest --> UC1
+    Actor_Guest --> UC2
+    Actor_Guest --> UC3
+    Actor_Guest --> UC4
+    Actor_Guest --> UC5
+    Actor_Guest --> UC7
+
+    Actor_User --> UC1
+    Actor_User --> UC2
+    Actor_User --> UC3
+    Actor_User --> UC4
+    Actor_User --> UC5
+    Actor_User --> UC6
+    Actor_User --> UC7
+
+    Actor_Admin --> UC7
+    Actor_Admin --> UC8
+
+    %% Include & Extend
+    UC3 -.-> |<<include>>| UC1
+    UC3 -.-> |<<include>>| UC2
+    UC5 -.-> |<<extend>>| UC4

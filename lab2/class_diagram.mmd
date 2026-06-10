@@ -1,0 +1,57 @@
+classDiagram
+    class User {
+        -int id
+        -String email
+        -String role
+        -Date registrationDate
+        +authenticate() boolean
+        +getHistory() List~Hook~
+    }
+    class Guest {
+        -int remainingGenerations
+        +useTrial() void
+    }
+    class RegisteredUser {
+        -List~Hook~ favoriteHooks
+        +saveToFavorites(Hook) void
+        +viewHistory() List~Hook~
+    }
+    class Admin {
+        +manageUsers() void
+        +updateLimits(int) void
+    }
+    class GenerationRequest {
+        -String topic
+        -String style
+        -Date timestamp
+        -int userId
+        +submit() void
+        +getResult() Hook
+    }
+    class Hook {
+        -int id
+        -String text
+        -String style
+        -boolean isFavorite
+        -Date createdAt
+        +copyToClipboard() void
+        +getText() String
+    }
+    class History {
+        -List~Hook~ listOfHooks
+        +addHook(Hook) void
+        +clearHistory() void
+    }
+    class AuthService {
+        +login(String, String) User
+        +register(String, String) User
+        +logout() void
+    }
+
+    User <|-- Guest
+    User <|-- RegisteredUser
+    User <|-- Admin
+    RegisteredUser "1" -- "1" History : has
+    History "1" -- "*" Hook : contains
+    User "1" -- "*" GenerationRequest : makes
+    GenerationRequest ..> AuthService : uses

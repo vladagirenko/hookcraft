@@ -1,0 +1,18 @@
+sequenceDiagram
+    actor User as Зареєстрований користувач
+    participant UI as Веб-інтерфейс
+    participant Auth as AuthService
+    participant API as HookCraft API
+    participant AI as OpenAI API
+    participant DB as База даних
+
+    User->>UI: Вводить тему та стиль
+    UI->>Auth: Перевірити токен
+    Auth-->>UI: Токен дійсний
+    UI->>API: POST /generate (topic, style)
+    API->>AI: Запит до API
+    AI-->>API: Список гачків
+    API->>DB: Зберегти результат (user_id, hooks)
+    DB-->>API: Підтвердження
+    API-->>UI: Повернути результат
+    UI-->>User: Відобразити варіанти
