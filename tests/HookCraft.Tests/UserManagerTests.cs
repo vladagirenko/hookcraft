@@ -70,7 +70,7 @@ namespace HookCraft.Tests
             var manager = CreateManager();
             var guest = new UserProfile { Role = "Guest", RemainingGenerations = 3 };
 
-            bool result = manager.VerifyAndConsumeGenerationCredit(guest);
+            bool result = UserManager.VerifyAndConsumeGenerationCredit(guest);
 
             // Техніка: Позитивний сценарій / Класи еквівалентності (EP)
             Assert.True(result);
@@ -84,7 +84,7 @@ namespace HookCraft.Tests
             var guest = new UserProfile { Role = "Guest", RemainingGenerations = 0 };
 
             // Техніка: Негативний сценарій / Граничні значення (BVA - межа нуля)
-            Assert.Throws<InvalidOperationException>(() => manager.VerifyAndConsumeGenerationCredit(guest));
+            Assert.Throws<InvalidOperationException>(() => UserManager.VerifyAndConsumeGenerationCredit(guest));
         }
 
         [Fact]
@@ -93,7 +93,7 @@ namespace HookCraft.Tests
             var manager = CreateManager();
             var user = new UserProfile { Role = "Registered", RemainingGenerations = 0 };
 
-            bool result = manager.VerifyAndConsumeGenerationCredit(user);
+            bool result = UserManager.VerifyAndConsumeGenerationCredit(user);
 
             // Техніка: Позитивний сценарій / Класи еквівалентності (EP - ліміти не діють на роль)
             Assert.True(result);
@@ -105,7 +105,7 @@ namespace HookCraft.Tests
             var manager = CreateManager();
 
             // Техніка: Негативний сценарій / Класи еквівалентності (EP)
-            Assert.Throws<ArgumentNullException>(() => manager.VerifyAndConsumeGenerationCredit(null!));
+            Assert.Throws<ArgumentNullException>(() => UserManager.VerifyAndConsumeGenerationCredit(null!));
         }
 
         [Fact]
