@@ -1,0 +1,32 @@
+name: .NET Core CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]  
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build projects
+      run: dotnet build --no-restore --configuration Release
+
+    - name: Run Unit Tests
+      run: dotnet test --no-build --verbosity normal
+
+    - name: Trigger Render Deploy Hook
+      if: success()  
+      run: |
+        curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
